@@ -1,0 +1,217 @@
+// .content-layout {
+//   max-width: 1200px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 0 60px;
+//   position: relative;
+//   z-index: 2;
+// }
+// .content-layout2 {
+//   max-width: 1200px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 0 76px;
+//   position: relative;
+//   z-index: 2;
+// }
+// .header-overlay {
+//   width: 100%;
+//   position: relative;
+// }
+// .image-container {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: 1;
+// }
+// .image-container img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+// .hr-container {
+//   position: relative;
+//   width: 100vw;
+//   z-index: 2;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
+// hr {
+//   width: 100%;
+//   background-color: white;
+//   opacity: 0.2;
+//   margin: 0;
+//   border: none;
+//   height: 1px;
+// }
+// @media (max-width: 962px) {
+//   .content-layout {
+//     padding: 0 20px;
+//   }
+// }
+
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// body {
+//   font-family: Arial, sans-serif;
+//   background-color: #1f2937; /* Dark Gray */
+//   color: #ffffff;
+//   line-height: 1.6;
+// }
+
+// .hero-section {
+//   display: flex;
+//   color: white;
+//   align-items: center;
+//   justify-content: center;
+//   min-height: 400px;
+// }
+
+// .container {
+//   max-width: 1200px;
+//   width: 100%;
+// }
+
+// .content {
+//   max-width: 600px;
+//   text-align: left;
+// }
+
+// h1 {
+//   font-size: 2.5rem;
+//   font-weight: 300;
+//   margin-bottom: 1rem;
+// }
+
+// h1 .highlight {
+//   font-weight: 600;
+// }
+
+// p {
+//   font-size: 1rem;
+//   color: #d1d5db; /* Light Gray */
+//   margin-bottom: 1.5rem;
+// }
+
+// .cta-button {
+//   display: inline-flex;
+//   align-items: center;
+//   background-color: #f97316; /* Orange */
+//   color: #fff;
+//   padding: 0.75rem 1.5rem;
+//   border: none;
+//   border-radius: 0.5rem;
+//   font-size: 1rem;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
+// }
+
+// .cta-button:hover {
+//   background-color: #ea580c; /* Darker Orange */
+// }
+
+// .arrow {
+//   margin-left: 10px; /* Space between text and arrow */
+//   font-size: 1.2rem; /* Adjust size */
+//   transition: transform 0.3s ease;
+//   rotate: -10deg;
+// }
+
+// /* Add arrow animation on hover */
+// .cta-button:hover .arrow {
+//   transform: translateX(5px); /* Move the arrow to the right */
+// }
+/* General Styles */
+
+
+// .content {
+//   margin: 0 auto;
+//   max-width: 600px;
+// }
+
+// /* Media Query for Small Screens */
+// @media (max-width: 768px) {
+//   .hero-section {
+//     font-size: small;
+//     padding-left: 0; /* Remove left padding for small screens */
+//     padding-right: 6; /* Remove right padding for small screens */
+//   }
+//   .content {
+//     margin: 0; /* Ensure no horizontal margin */
+//   }
+// }
+// .content-layout {
+//   max-width: 1200px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 0 60px;
+//   position: relative;
+//   z-index: 2;
+// }
+
+// .content-layout2 {
+//   max-width: 1200px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 0 76px;
+//   position: relative;
+//   z-index: 2;
+// }
+
+// .header-overlay {
+//   width: 100%;
+//   position: relative;
+// }
+
+// .hero-section {
+//   display: flex;
+//   color: white;
+//   align-items: center;
+//   justify-content: center;
+//   min-height: 400px;
+// }
+
+// .content {
+//   max-width: 600px;
+//   text-align: left;
+// }
+
+// @media (max-width: 640px) {
+//   .content-layout {
+//     margin: 0;
+//     padding: 0 0px;
+//     max-width: 0%;
+//   }
+  
+//   .content-layout2 {
+//     margin: 0;
+//     // padding: 0 20px;
+//     max-width: 100%;
+//   }
+  
+//   .content {
+//     max-width: 100%;
+//     margin: 0;
+//   }
+  
+//   .hero-section {
+//     justify-content: flex-start;
+//   }
+  
+//   .header-overlay {
+//     margin: 0;
+//     padding: 0;
+//   }
+// }
+
+// @media (max-width: 768px) { /* Mobile screens ke liye */
+//   .mobile-right {
+//     transform: translateX(0%); /* Image ko right shift kare */
+//   }
+// }

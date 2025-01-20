@@ -1,0 +1,28 @@
+
+
+<div class="fixed inset-0 bg-black/20 backdrop-blur-sm transition-all duration-300 hidden [&.active]:block z-10"
+  [class.active]="isMenuOpen">
+</div>
+<div class="flex items-center justify-between px-5 py-2.5 relative z-20">
+  <div class="flex items-center text-white h-[50px] w-[65px] font-bold gap-1.5">
+    <img src="assets/icon/logo.png" alt="FactoryPro" class="h-[30px]">
+    <span>FactoryPro</span>
+  </div>
+  <div class="lg:hidden text-2xl cursor-pointer text-white" (click)="toggleMenu()">
+    <ion-icon name="menu"></ion-icon>
+  </div>
+  <div class="hidden lg:flex items-center gap-5 text-white mt-11 lg:relative lg:bg-transparent lg:flex-row lg:p-0 lg:shadow-none [&.active]:flex absolute top-full left-0 right-0 bg-gray-500/40 flex-col p-5 shadow transition-all duration-300 ease-in-out translate-y-[-100%] [&.active]:translate-y-0" 
+    [class.active]="isMenuOpen">
+    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">Home</span>
+    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">About Us</span>
+    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">Services</span>
+    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">Blog</span>
+    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">Projects</span>
+    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">Page</span>
+    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">Contact Us</span>
+    <img src="../../../../../assets/imgs/call.png" alt="">
+    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">+01123456789</span>
+  </div>
+</div>
+
+
