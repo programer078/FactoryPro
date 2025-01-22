@@ -17,7 +17,24 @@
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
 @import "@ionic/angular/css/display.css";
-
+.light-theme {
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+    --ion-toolbar-background: #ffffff;
+    --ion-toolbar-text-color: #000000;
+    /* Add any other color overrides for light theme */
+  }
+  
+  /* Prevent dark mode from applying when system is in dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Override dark mode colors to light */
+      --ion-background-color: #ffffff;
+      --ion-text-color: #000000;
+      --ion-toolbar-background: #ffffff;
+      --ion-toolbar-text-color: #000000;
+    }
+  }
 /* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
 @import "@ionic/angular/css/float-elements.css";
@@ -36,4 +53,4 @@
  @tailwind utilities;
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+

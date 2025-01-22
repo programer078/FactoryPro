@@ -6,13 +6,14 @@ import { CardComponent } from "../../core/shared/component/card/card.component";
 import { RatingboxComponent } from "../../core/shared/component/ratingbox/ratingbox.component";
 import { ButtonComponent } from "../../core/shared/component/button/button.component";
 import { ServicesCardComponent } from "../../core/shared/component/services-card/services-card.component";
+import { IndustryComponent } from "../../core/shared/component/industry/industry.component";
 
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonContent, HeaderComponent, IonIcon, IonRow, IonGrid,  ImgComponent, CardComponent, RatingboxComponent, ButtonComponent, ServicesCardComponent],
+  imports: [IonContent, HeaderComponent, IonIcon, IonRow, IonGrid, ImgComponent, CardComponent, RatingboxComponent, ButtonComponent, ServicesCardComponent, IndustryComponent],
 })
 export class HomePage {
   isMenuOpen = false;

@@ -2,8 +2,10 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { RouteReuseStrategy, provideRouter, withPreloading, PreloadAllModules, withHashLocation } from '@angular/router';
 import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalone';
 import { addIcons, } from 'ionicons';
+import { register } from 'swiper/element/bundle';
+register();
 import { routes } from './app/app.routes';
-import { menuOutline, closeOutline,trendingUpOutline ,arrowForwardOutline,settingsOutline,starOutline} from 'ionicons/icons';
+import { menuOutline, closeOutline,trendingUpOutline ,arrowForwardOutline,settingsOutline,starOutline,playCircleOutline} from 'ionicons/icons';
 import { AppComponent } from './app/app.component';
 import { HashLocationStrategy } from '@angular/common';
 bootstrapApplication(AppComponent, {
@@ -21,5 +23,6 @@ addIcons({
   'trending':trendingUpOutline,
   'arrow-forward-outline':arrowForwardOutline,
   'settings-outline':settingsOutline,
-  'star':starOutline
+  'star':starOutline,
+  'play-circle-outline': playCircleOutline,
 });

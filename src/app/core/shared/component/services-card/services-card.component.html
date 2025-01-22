@@ -1,19 +1,41 @@
-<div class="mx-auto sm:max-w-[1212px] px-[60px] ">
-  <div class="grid grid-cols-1 gap-6 bg-white shadow-lg lg:grid-cols-4 lg:gap-8 rounded-lg p-8">
-     @for (card of cardsection; track $index) {
-      <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md">
-        <img
-          [src]="card.img"
-          alt="Custom Manufacturing"
-          class="w-20 h-20 mb-4"
-        />
-        <h3 class="mt-2 text-lg font-semibold">{{card.tital}}</h3>
-        <a href="#" class="mt-4 inline-flex items-center text-gray-500 hover:text-yellow-400 bg-gray-100 h-[40px] w-[75px] rounded-xl justify-center">
-          <ion-icon name="arrow-forward-outline" class="text-2xl"></ion-icon>
-        </a>
-      </div>
-  
-     }
-  
+<div class="mx-auto sm:max-w-[1212px] sm:min-w-[222px] px-[60px] ">
+  <div class=" gap-6 bg-white  lg:gap-8 rounded-lg p-8 ">
+    <swiper-container [breakpoints]="
+    {
+      '360':{
+        'slidesPerView': 1,
+        'spaceBetween': 10,
+      },
+      '760':{
+        'slidesPerView':4,
+        'spaceBetween': 10,
+      },
+      '1221':{
+        'slidesPerView': 4,
+        'spaceBetween': 40,
+      }
+    }
+    "
+    class="mySwiper custom-swiper"  [loop]="true"  autoplay-delay="750" 
+    autoplay-disable-on-interaction="false"  >
+      @for (card of cardsection; track $index) {
+       <swiper-slide>
+         <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg ">
+           <img
+             [src]="card.img"
+             alt="Custom Manufacturing"
+             class="w-20 h-20 mb-4"
+           />
+           <h3 class="mt-2 text-lg font-semibold">{{card.tital}}</h3>
+           <a href="#" class="mt-4 inline-flex items-center text-gray-500 hover:text-yellow-400 bg-gray-100 h-[40px] w-[75px] rounded-xl justify-center">
+             <ion-icon name="arrow-forward-outline" class="text-2xl"></ion-icon>
+           </a>
+         </div>
+       </swiper-slide>
+    
+      }  
+     </swiper-container>
+     
    
+</div>
 </div>

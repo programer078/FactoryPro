@@ -10,6 +10,7 @@ module.exports = {
         mobile4: '420px',   // Mobile devices
         mobile5:'540px',
         mobile6:'605px',
+        lg: '1024px',
       nexthub:'1280px'
 
 
