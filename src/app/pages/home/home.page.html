@@ -1,11 +1,14 @@
 <ion-content class="relative overflow-auto h-screen">
     <div class="absolute top-0 left-0 w-screen h-screen z-[1]">
-     <div  class="w-full h-full object-cover mobile:h-[900px] tablet:h-[800px] mobile6:h-[800px] mobile2:h-[930px] mobile:w-full desktop:h-[750px] ">
-      <app-img imgPath="assets/imgs/mainpic.png"></app-img>   
-     </div>
+      <div class="relative w-full   h-[930px] mobile:h-[900px] mobile2:h-[930px] mobile6:h-[800px] tablet:h-[800px] desktop:h-[750px]">
+<app-img 
+imgPath="assets/imgs/mainpic.png" 
+class="w-full h-full object-cover absolute inset-0"
+/>   
+</div>
     </div>
     <div class="relative w-full px-5 mx-0 sm:max-w-[1212px] sm:mx-auto sm:px-[60px] z-[5]">
-      <app-header class="w-full relative m-0"></app-header>
+      <app-header class="w-full relative m-0"/>
     </div>
     <div class="relative w-screen z-[2] left-1/2 -translate-x-1/2">
       <hr class="w-full h-[1px] bg-white/20 border-0 m-0">
@@ -23,7 +26,7 @@
             <p class="text-base text-[#d1d5db] mb-6">
               At the heart of our operations is a commitment to delivering superior products through cutting-edge technology and innovative processes.
             </p>
-          <app-button text="Explore More"></app-button>
+          <app-button text="Explore More"/>
           </div>
           <br><br><br>
           <hr class="w-full h-[1px] bg-white/20 border-0 m-0 mt-20">
@@ -57,7 +60,7 @@
           </app-img>
         </div>
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center sm:max-w-[1212px] sm:mx-auto sm:px-[60px]  ">
-      <app-card></app-card>
+      <app-card/>
           <div class="mobile:mt-12 mobile2:mt-12 nexthub:mt-12">
             <p></p>
             <ion-icon name="settings-outline" class="text-[#FF9900] mt-5"></ion-icon>
@@ -87,10 +90,10 @@
                   <span class="text-gray-800">Reliable Delivery Services</span>
                 </li>
               </ul>
-                     <app-ratingbox></app-ratingbox>
+                     <app-ratingbox/>
             </div>
                     <div class="mt-6 flex items-center space-x-4">
-              <app-button text="Learn More"></app-button>
+              <app-button text="Learn More"/>
             </div>
           </div>
         </div>
@@ -124,39 +127,33 @@
         </div>
       </div>
       <div class="relative z-20 -mt-36">
-       <app-services-card></app-services-card>
+       <app-services-card/>
       </div>
     </div>
     
+    <!-- <section4></section> -->
     
     <section class="py-16 px-6 lg:mx-auto lg:max-w-[1212px] lg:px-[60px]">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Left Section -->
         <div>
-          <!-- Header with Icon -->
           <div class="flex items-center mb-4">
             <ion-icon name="settings-outline" class="text-[#FF9900] text-2xl mr-2"></ion-icon>
             <span class="uppercase text-sm text-black font-medium">OUR STORY</span>
           </div>
-          <!-- Title -->
           <h3 class="text-4xl lg:text-4xl font-bold text-gray-800 leading-tight mb-8 mobile:text-2xl  mobile2:text-2xl  mobile5:text-2xl">
             Transforming industries <br />
             with innovative efficient <br />
             solutions
           </h3>
-          <!-- Large Image -->
-          <div class="w-full h-[300px] lg:h-[500px] overflow-hidden rounded-xl">
-            <img
-              src="../../../assets/imgs/wokerworking.png"
+          <div class="w-full h-[300px] lg:h-[500px] overflow-hidden">
+            <app-img
+              imgPath="../../../assets/imgs/wokerworking.png"
               alt="Industrial Worker Image"
               class="w-full h-full object-cover"
             />
           </div>
         </div>
-    
-        <!-- Right Section -->
-        <div class="flex flex-col justify-between h-full">
-          <!-- Small Images Grid -->
+            <div class="flex flex-col justify-between h-full">
           <div class="grid grid-cols-2 gap-4 mb-6">
             <div class="w-full h-[150px] lg:h-[200px] overflow-hidden rounded-lg">
               <img
@@ -173,14 +170,11 @@
               />
             </div>
           </div>
-          <!-- Description Text -->
           <p class="text-gray-600 text-lg leading-relaxed mb-8">
             We specialize in revolutionizing industries by delivering innovative, efficient solutions that enhance productivity
             and streamline processes. Through advanced technologies, precision engineering, and sustainable practices.
           </p>
           <hr class="w-full h-[1px] bg-black/20 border-0 m-0 ">
-
-          <!-- Stats Section -->
           <div class="flex justify-between items-center mb-10 mobile:mt-3 mobile2:mt-3 mobile4:mt-3">
             <div class="text-center">
               <h3 class="text-3xl font-bold text-[#FF9900]">10k+</h3>
@@ -234,7 +228,190 @@
     
     
     
-    <app-industry></app-industry>
-    
+    <app-industry/>    
+
+    <!-- <section6></section> -->
+
+<br>
+<div class="max-w-6xl mx-auto p-6">
+  <div class="flex items-center mb-6">
+    <ion-icon name="settings-outline" class="text-[#FF9900] text-2xl mr-2"></ion-icon>
+    <span class="uppercase text-sm text-black font-bold">OUR STORY</span>
+  </div>
+  <header class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+    <h6 class="text-4xl  text-gray-900 mobile:text-2xl mobile2:text-2xl mobile4:text-2xl desktop:text-4xl">Our successful project <br><span class="font-bold">initiatives</span></h6>
+    <a class="text-gray-600  text-justify">Our successful project initiatives showcase our commitment to excellence <br> and innovation across various industries.</a>
+  </header>
+  <div class="hidden xl:block">
+    <nav class="flex justify-center space-x-6 mb-12">
+      <button class="text-orange-500 font-semibold">All &nbsp;&nbsp;/</button>
+      <button class="text-black hover:text-orange-500">Automation &nbsp;&nbsp;/</button>
+      <button class="text-black hover:text-orange-500">Development &nbsp;&nbsp;/</button>
+      <button class="text-black hover:text-orange-500">Infrastructure &nbsp;&nbsp;/</button>
+      <button class="text-black hover:text-orange-500">Manufacturing &nbsp;&nbsp;/</button>
+      <button class="text-black hover:text-orange-500">Sustainability</button>
+    </nav>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <div class="relative">
+      <div class="w-full h-[350px] object-cover rounded-[20px]">
+      <app-img imgPath="../../../assets/imgs/automashine.png" />
+      </div>  
+      <span class="absolute top-4 left-4 bg-black bg-opacity-60 text-white text-sm font-semibold p-1 rounded">Development</span>
+      <h3 class="text-lg font-bold text-gray-900 mt-4 text-center mobile:text-sm mobile2:text-sm mobile4:text-sm desktop:text-lg">
+        Total Quality Management Implementation
+      </h3>
+    </div>
+    <div class="relative">
+      <div class="w-full h-[350px] object-cover rounded-[20px]">
+        <app-img imgPath="../../../assets/imgs/wokermashine.png" />
+        </div>  
+      <span class="absolute top-4 left-4 bg-black bg-opacity-60 text-white text-sm font-semibold p-1 rounded">Automation</span>
+      <h3 class="text-lg font-bold text-gray-900 mt-4 text-center mobile:text-sm mobile2:text-sm mobile4:text-sm desktop:text-lg">
+        Advanced Research In Material Science
+      </h3>
+    </div>
+    <div class="relative">
+      <div class="w-full h-[350px] object-cover rounded-[20px]">
+        <app-img imgPath="../../../assets/imgs/wokerworking.png" />
+        </div>
+      <span class="absolute top-4 left-4 bg-black bg-opacity-60 text-white text-sm font-semibold p-1 rounded">Infrastructure</span>
+      <h3 class="text-lg font-bold text-gray-900 mt-4 text-center mobile:text-sm mobile2:text-sm mobile4:text-sm desktop:text-lg">
+        Workplace Safety Enhancement Initiative
+      </h3>
+    </div>
+    <div class="relative">
+      <div class="w-full h-[350px] object-cover rounded-[20px]">
+        <app-img imgPath="../../../assets/imgs/robetheart.png" />
+        </div>
+      <span class="absolute top-4 left-4 bg-black bg-opacity-60 text-white text-sm font-semibold p-1 rounded">Infrastructure</span>
+      <h3 class="text-lg font-bold text-gray-900 mt-4 text-center mobile:text-sm mobile2:text-sm mobile4:text-sm desktop:text-lg">
+        Robotic Process Automation Deployment
+      </h3>
+    </div>
+  </div>
+</div>
+
+<!-- <section7></section7> -->
+ 
+
+<div class="bg-gray-50 p-8">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <div class="space-y-6">
+      <div class="flex items-center space-x-2">
+        <ion-icon name="settings-outline" class="text-[#FF9900] text-2xl mr-2"></ion-icon>
+        <span class="uppercase text-sm text-black font-medium">OUR PROCESS</span>
+      </div>
+
+      <h6 class="text-3xl  text-gray-800 font-light">
+        Streamlined processes  <span class="text-black font-bold "> for optimal efficiency</span>
+      </h6>
+      <div class="rounded-[25px] overflow-hidden">
+        <img
+          src="../../../assets/imgs/optimalefficieency.png"
+          alt="Machine process"
+          class="h-[400px] w-full object-cover"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col justify-start h-full">
+      <p class="text-gray-600 mt-5">
+        Our process is designed to maximize efficiency and quality at every stage
+        of production. By integrating advanced technologies and best practices, we
+        ensure seamless workflows.
+      </p>
+      <div id="stepContainer" class="space-y-6 mt-14">
+        <div
+          class="step-card flex items-center space-x-4 p-4 rounded-[30px] cursor-pointer transition hover:bg-orange-500 hover:text-white group"
+        >
+          <div
+            class="flex items-center justify-center text-4xl font-bold text-orange-500 group-hover:text-white transition"
+          >
+            <h1>01</h1>
+          </div>
+          <div>
+            <h4 class="step-title text-lg font-semibold text-gray-800 group-hover:text-white transition">
+              Understanding Your Needs
+            </h4>
+            <p class="step-desc text-gray-600 group-hover:text-white transition mobile:text-sm mobile2:text-sm mobile4:text-sm ">
+              We begin by thoroughly assessing your requirements and objectives to
+              develop a tailored approach.
+            </p>
+          </div>
+        </div>
+        <div
+          class="step-card flex items-center space-x-4 p-4 rounded-[30px] cursor-pointer transition hover:bg-orange-500 hover:text-white group"
+        >
+          <div
+            class="flex items-center justify-center text-4xl font-bold text-orange-500 group-hover:text-white transition"
+          >
+            <h1>02</h1>
+          </div>
+          <div>
+            <h4 class="step-title text-lg font-semibold text-gray-800 group-hover:text-white transition">
+              Design and Planning
+            </h4>
+            <p class="step-desc text-gray-600 group-hover:text-white transition mobile:text-sm mobile2:text-sm mobile4:text-sm  ">
+              Our team collaborates to create detailed project plans, ensuring all
+              aspects of the process.
+            </p>
+          </div>
+        </div>
+        <div
+          class="step-card flex items-center space-x-4 p-4 rounded-[30px] cursor-pointer transition hover:bg-orange-500 hover:text-white group"
+        >
+          <div
+            class="flex items-center justify-center text-4xl font-bold text-orange-500 group-hover:text-white transition"
+          >
+            <h1>03</h1>
+          </div>
+          <div>
+            <h4 class="step-title text-lg font-semibold text-gray-800 group-hover:text-white transition">
+              Implementation
+            </h4>
+            <p class="step-desc text-gray-600 group-hover:text-white transition mobile:text-sm mobile2:text-sm mobile4:text-sm ">
+              Utilizing advanced technologies and skilled personnel, we execute the
+              project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <section-8></section-8> -->
+<div class="p-8">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <!-- Left Side Content -->
+    <div class="space-y-6">
+      <div class="flex items-center space-x-2">
+        <ion-icon name="settings-outline" class="text-[#FF9900] text-2xl mr-2"></ion-icon>
+        <span class="uppercase text-sm text-black font-medium">pricing plan</span>
+      </div>
+      <h6 class="text-3xl text-gray-800 font-light">
+        Transparent pricing for <br>
+        <span class="text-black font-bold">every solution</span>
+      </h6>
+    </div>
+
+    <!-- Right Side Paragraph -->
+    <div class="mt-12">
+      <p class="text-gray-600">
+        We believe in providing clear and upfront pricing to ensure that you <br>
+        understand the value of our services.
+      </p>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <app-parsingplan/>
+  
+  
+  
+</div>
+
+
+
   </ion-content>
     

@@ -5,7 +5,7 @@ import { addIcons, } from 'ionicons';
 import { register } from 'swiper/element/bundle';
 register();
 import { routes } from './app/app.routes';
-import { menuOutline, closeOutline,trendingUpOutline ,arrowForwardOutline,settingsOutline,starOutline,playCircleOutline} from 'ionicons/icons';
+import { menuOutline, closeOutline,trendingUpOutline ,  arrowForwardOutline,settingsOutline,starOutline,playCircleOutline, calendar, calendarOutline, cashOutline, timeOutline} from 'ionicons/icons';
 import { AppComponent } from './app/app.component';
 import { HashLocationStrategy } from '@angular/common';
 bootstrapApplication(AppComponent, {
@@ -24,5 +24,8 @@ addIcons({
   'arrow-forward-outline':arrowForwardOutline,
   'settings-outline':settingsOutline,
   'star':starOutline,
+  'calendar-outline' :calendarOutline,
   'play-circle-outline': playCircleOutline,
+  'cashOutline':cashOutline,
+  'time-outline':timeOutline
 });

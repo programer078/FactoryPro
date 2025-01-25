@@ -1,62 +1,67 @@
 <div class="bg-[#222222] relative min-h-fit">
-  <!-- Background image container - Now with dynamic height -->
   <div class="absolute inset-0 min-h-[1000px] sm:min-h-[800px] md:min-h-[900px] lg:min-h-[800px] min-w-[1000px]">
-      <app-img imgPath="../../../../../assets/imgs/4backgrounmainpic.png" class="w-full h-full object-cover absolute inset-0"></app-img>
-  </div>
-  
-  <!-- Overlay Content -->
-  <div class="relative flex flex-col min-h-[1000px] sm:min-h-[800px] md:min-h-[900px] lg:min-h-[800px]">
-      <!-- Main Content Section -->
-      <div class="w-full xl:w-1/2 p-6 md:p-20">
-          <div class="flex items-center space-x-2">
-              <ion-icon name="settings-outline" class="text-[#FF9900]"></ion-icon>
-              <h3 class="text-white uppercase text-xs tracking-wide">What We Do</h3>
-          </div>
-          <h6 class="text-4xl md:text-3.5xl font-light mt-4 text-white">
-              Innovative factory and industry <span class="text-white font-bold">solutions today</span>
-          </h6>
-          <!-- Grid Container -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-8">
-            <!-- Card 1 -->
-            <app-innovativesolutioncard
-              [backgroundColor]="'bg-transparent'"
-              [imagePath]="'../../../../../assets/imgs/automaticsolution.svg'"
-              [title]="'Automation Solutions'"
-              [description]="'Streamlining processes through cutting-edge technology.'">
-            </app-innovativesolutioncard>
-          
-            <!-- Card 2 -->
-            <app-innovativesolutioncard
-              [backgroundColor]="'bg-[#333333]'"
-              [imagePath]="'../../../../../assets/imgs/qualitycontrol.svg'"
-              [title]="'Quality Control'"
-              [description]="'Ensuring product excellence through rigorous testing.'">
-            </app-innovativesolutioncard>
-          
-            <!-- Card 3 -->
-            <app-innovativesolutioncard
-              [backgroundColor]="'bg-[#333333] mobile:bg-transparent mobile2:bg-transparent mobile4:bg-transparent desktop:bg-[#333333] tablet:bg-[#333333]'"
-              [imagePath]="'../../../../../assets/imgs/processingerning.svg'"
-              [title]="'Process Engineering'"
-              [description]="'Ensuring product excellence through rigorous testing.'">
-            </app-innovativesolutioncard>
-          
-            <!-- Card 4 -->
-            <app-innovativesolutioncard
-              [backgroundColor]="'bg-transparent mobile:bg-[#333333] desktop:bg-transparent mobile2:bg-[#333333] mobile4:bg-[#333333] tablet:bg-transparent '"
-              [imagePath]="'../../../../../assets/imgs/productdevelpment.svg'"
-              [title]="'Product Development'"
-              [description]="'Streamlining processes through cutting-edge technology.'">
-            </app-innovativesolutioncard>
-          </div>
-          
-          <p class="mt-8 text-gray-400">Let's make something great work together. <a href="#" class="text-yellow-500 underline hover:no-underline">Get Free Quote</a></p>
-      </div>
+    <app-img
+      imgPath="../../../../../assets/imgs/4backgrounmainpic.png"
+      class="w-full h-full object-cover absolute inset-0"
+    />
+    <div class="absolute inset-0 flex justify-center items-center z-10 ">
+      <div class="hidden xl:block">
+        <div class="relative flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full   ">
 
-      <!-- Right Section - Only visible on xl screens -->
-      <div class="hidden xl:block xl:absolute xl:right-0 xl:top-0 xl:w-1/2 xl:h-full">
-        <app-img imgPath="../../../../../assets/imgs/workercatting.png"></app-img>
-       
+          <ion-icon
+            name="arrow-forward-outline"
+            class="text-white text-2xl -rotate-[28deg]  hover:translate-x-[5px] transition-transform duration-300 "
+          ></ion-icon>
+        </div>
       </div>
+    </div>
+  </div>
+  <div class="relative flex flex-col min-h-[1000px] sm:min-h-[800px] md:min-h-[900px] lg:min-h-[800px]">
+    <div class="w-full xl:w-1/2 p-6 md:p-20">
+      <div class="flex items-center space-x-2">
+        <ion-icon name="settings-outline" class="text-[#FF9900]"></ion-icon>
+        <h3 class="text-white uppercase text-xs tracking-wide">What We Do</h3>
+      </div>
+      <h6 class="text-4xl md:text-3.5xl font-light mt-4 text-white">
+        Innovative factory and industry <span class="text-white font-bold">solutions today</span>
+      </h6>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-8">
+        <app-innovativesolutioncard
+          [backgroundColor]="'bg-transparent'"
+          [imagePath]="'../../../../../assets/imgs/automaticsolution.svg'"
+          [title]="'Automation Solutions'"
+          [description]="'Streamlining processes through cutting-edge technology.'"
+        />
+     
+        <app-innovativesolutioncard
+          [backgroundColor]="'bg-[#333333]'"
+          [imagePath]="'../../../../../assets/imgs/qualitycontrol.svg'"
+          [title]="'Quality Control'"
+          [description]="'Ensuring product excellence through rigorous testing.'"
+        />
+    
+        <app-innovativesolutioncard
+          [backgroundColor]="'bg-[#333333] mobile:bg-transparent mobile2:bg-transparent mobile4:bg-transparent desktop:bg-[#333333] tablet:bg-[#333333]'"
+          [imagePath]="'../../../../../assets/imgs/processingerning.svg'"
+          [title]="'Process Engineering'"
+          [description]="'Ensuring product excellence through rigorous testing.'"
+        />
+        
+        <app-innovativesolutioncard
+          [backgroundColor]="'bg-transparent mobile:bg-[#333333] desktop:bg-transparent mobile2:bg-[#333333] mobile4:bg-[#333333] tablet:bg-transparent '"
+          [imagePath]="'../../../../../assets/imgs/productdevelpment.svg'"
+          [title]="'Product Development'"
+          [description]="'Streamlining processes through cutting-edge technology.'"
+        />
+     
+      </div>
+      <p class="mt-8 text-gray-400">
+        Let's make something great work together.
+        <span  class="text-yellow-500 underline hover:no-underline cursor-pointer">Get Free Quote</span>
+      </p>
+    </div>
+    <div class="hidden xl:block xl:absolute xl:right-0 xl:top-0 xl:w-1/2 xl:h-full">
+      <app-img imgPath="../../../../../assets/imgs/workercatting.png"/>
+    </div >
   </div>
 </div>
