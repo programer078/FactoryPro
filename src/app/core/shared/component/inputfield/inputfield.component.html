@@ -1,0 +1,30 @@
+<div class="w-full mb-4">
+  <input
+    [type]="type"
+    [placeholder]="placeholder"
+    [formControl]="control"
+    (blur)="onBlur()"
+    class="w-full p-2 border rounded-md"
+    [class.border-red-500]="shouldShowError()"
+  />
+@if (shouldShowError()) {
+  <div class="text-red-500 text-sm mt-1" >
+    @if (control.hasError('required')) {
+      This field is required
+    }
+    @if (control.hasError('email')) {
+      Please enter a valid email
+    }
+    @if (control.hasError('minlength')) {
+      Minimum {{ control.errors?.['minlength']?.requiredLength }} characters required
+    }
+    @if (control.hasError('pattern')) {
+      Please enter a valid format
+    }
+    @if (control.hasError('maxlength')) {
+      Maximum {{ control.errors?.['maxlength']?.requiredLength }} characters allowed
+    }
+  </div>
+}
+ 
+</div>

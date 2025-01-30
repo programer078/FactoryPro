@@ -220,16 +220,10 @@ class="w-full h-full object-cover absolute inset-0"
               <span>WATCH INTRO</span>
             </button>
           </div>
-          
         </div>
       </div>
     </section>
-    
-    
-    
-    
     <app-industry/>    
-
     <!-- <section6></section> -->
 
 <br>
@@ -303,7 +297,7 @@ class="w-full h-full object-cover absolute inset-0"
         <span class="uppercase text-sm text-black font-medium">OUR PROCESS</span>
       </div>
 
-      <h6 class="text-3xl  text-gray-800 font-light">
+      <h6 class="text-3xl  text-gray-800 font-light mobile:text-2xl">
         Streamlined processes  <span class="text-black font-bold "> for optimal efficiency</span>
       </h6>
       <div class="rounded-[25px] overflow-hidden">
@@ -383,35 +377,87 @@ class="w-full h-full object-cover absolute inset-0"
 <!-- <section-8></section-8> -->
 <div class="p-8">
   <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-    <!-- Left Side Content -->
     <div class="space-y-6">
       <div class="flex items-center space-x-2">
         <ion-icon name="settings-outline" class="text-[#FF9900] text-2xl mr-2"></ion-icon>
         <span class="uppercase text-sm text-black font-medium">pricing plan</span>
       </div>
-      <h6 class="text-3xl text-gray-800 font-light">
+      <h6 class="text-3xl text-gray-800 font-light desktop:text-3xl mobile2:text-2xl">
         Transparent pricing for <br>
         <span class="text-black font-bold">every solution</span>
       </h6>
     </div>
-
-    <!-- Right Side Paragraph -->
-    <div class="mt-12">
+    <div class="mt-12 desktop:mt-12 mobile:mt-3 mobile2:mt-2 mobile4:mt-2">
       <p class="text-gray-600">
         We believe in providing clear and upfront pricing to ensure that you <br>
         understand the value of our services.
       </p>
     </div>
   </div>
-
-  <!-- Cards Section -->
   <app-parsingplan/>
   
   
   
 </div>
 
+<!-- <section9></section> -->
+<app-satisfiedclient/>
+ <!-- <section10></section10> -->
+ <div class="p-8">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <div class="space-y-6">
+      <div class="flex items-center space-x-2">
+        <ion-icon name="settings-outline" class="text-[#FF9900] text-2xl mr-2"></ion-icon>
+        <span class="uppercase text-sm text-black font-medium">latest blog</span>
+      </div>
+      <h6 class="text-3xl text-gray-800 font-light desktop:text-3xl mobile2:text-2xl">
+        Insights from our <br>
+        <span class="text-black font-bold">latest blogs</span>
+      </h6>
+    </div>
+    <div class="mt-12 desktop:mt-12 mobile:mt-3 mobile2:mt-2 mobile4:mt-2">
+      <p class="text-gray-600">
+        Stay updated with the latest trends, innovations, and expert insights in the
+        manufacturing and industrial sectors
+      </p>
+    </div>
+  </div>
+ 
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10">
+    <div class="relative">
+      <div class="w-full h-[350px]  rounded-[30px] overflow-hidden">
+        <app-img imgPath="../../../assets/imgs/reducingwast.png" />
+        </div>  
+      <h3 class="text-lg font-bold text-gray-900 mt-4  mobile:text-[12px]  mobile2:text-sm mobile4:text-sm desktop:text-lg float-start">
+        Sustainable Practices Reducing Waste in <br>
+        Industrial Production
+      </h3>
+      <button class="w-10 h-10 flex items-center mt-4 float-end justify-center bg-orange-500 text-white rounded-[4px] shadow hover:bg-orange-600">
+        <ion-icon
+            name="arrow-forward-outline"
+            class="text-white text-2xl -rotate-[28deg]  hover:translate-x-[5px] transition-transform duration-300 "
+          ></ion-icon>
+    </button>
+    </div>
+ <div class="relative">
+  <div class="w-full h-[350px] object-cover">
+    <app-img imgPath="../../../assets/imgs/wokflows.png" />
+    </div>  
+    <h3 class="text-lg font-bold text-gray-900 mt-4  mobile:text-[12px]  mobile2:text-sm mobile4:text-sm desktop:text-lg float-start">
+      Advanced Robotics Revolutionizing <br>
+      Industrial Workflows
+    </h3>
+    <button class="w-10 h-10 flex items-center mt-4 float-end justify-center bg-orange-500 text-white rounded-[4px] shadow hover:bg-orange-600">
+      <ion-icon
+      name="arrow-forward-outline"
+      class="text-white text-2xl -rotate-[28deg]  hover:translate-x-[5px] transition-transform duration-300 "
+    ></ion-icon>
+  </button>
+ </div>
 
-
+    </div>
+</div>
+<app-foter></app-foter>
   </ion-content>
     

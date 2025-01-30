@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { IonContent,IonHeader,IonToolbar ,IonIcon} from '@ionic/angular/standalone';
+import { Component, inject, OnInit } from '@angular/core';
+import { IonContent,IonHeader,IonToolbar ,IonIcon,IonList} from '@ionic/angular/standalone';
 import { ImgComponent } from "../img/img.component";
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone:true,
@@ -14,7 +14,17 @@ export class HeaderComponent  implements OnInit {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
-  constructor() { }
+  parsingplan()
+  {
+   this.router.navigate(['/priplan'])
+  }
+  home() {
+    this.router.navigate(['/home'])
+  }
+  cotect() {
+    this.router.navigate(['/contactus'])
+  }
+  public router=inject(Router)
 
   ngOnInit() {}
 
