@@ -6,67 +6,67 @@
     <img src="assets/icon/logo.png" alt="FactoryPro" class="h-[30px]">
     <span>FactoryPro</span>
   </div>
-  <div class="lg:hidden text-2xl cursor-pointer text-white" (click)="toggleMenu()">
+  <div class="lg:hidden text-2xl cursor-pointer text-white " (click)="toggleMenu()">
     <ion-icon name="menu"></ion-icon>
   </div>
   <div class="hidden lg:flex items-center gap-5 text-white mt-11 lg:relative lg:bg-transparent lg:flex-row lg:p-0 lg:shadow-none [&.active]:flex absolute top-full left-0 right-0 bg-gray-500/40 flex-col p-5 shadow transition-all duration-300 ease-in-out translate-y-[-100%] [&.active]:translate-y-0" 
     [class.active]="isMenuOpen">
-    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200" (click)="home()" >Home</span>
-    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">About Us</span>
+    <span class="cursor-pointer hover:text-[var(--clr-orange)] transition-colors duration-200" (click)="home()" >Home</span>
+    <span class="cursor-pointer hover:text-[var(--clr-orange)] transition-colors duration-200">About Us</span>
         <div class="relative group">
-      <div class="flex items-center gap-1 cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[var(--clr-orange)] transition-colors duration-200">
         <span>Services</span>
         <ion-icon 
           name="caret-down-outline" 
           class="text-lg transition-transform duration-300 group-hover:rotate-180"
         ></ion-icon>
       </div>
-      <div class="absolute hidden group-hover:block top-full left-0 bg-gray-800 rounded-lg shadow-lg py-2 w-48 z-30">
+      <div class="absolute hidden group-hover:block top-full left-0 bg-[--clr-blue] rounded-lg shadow-lg py-2 w-48 z-30">
         <div class="flex flex-col">
-          <a class="flex items-center cursor-pointer justify-between px-4 py-2 text-white hover:bg-gray-700 hover:text-[#ff6b00] transition-colors duration-200">
+          <a class="flex items-center cursor-pointer justify-between px-4 py-2 text-white hover:bg-[var(--clr-blue2)] hover:text-[var(--clr-orange)] transition-colors duration-200">
             Industrial Solutions
             <ion-icon name="arrow-forward-outline" class="opacity-0 group-hover:opacity-100"></ion-icon>
           </a>
-          <a  class="flex items-center  cursor-pointer justify-between px-4 py-2 text-white hover:bg-gray-700 hover:text-[#ff6b00] transition-colors duration-200">
+          <a  class="flex items-center  cursor-pointer justify-between px-4 py-2 text-white hover:bg-[var(--clr-blue2)] hover:text-[var(--clr-orange)] transition-colors duration-200">
             Manufacturing
             <ion-icon name="arrow-forward-outline" class="opacity-0 group-hover:opacity-100"></ion-icon>
           </a>
-          <a class="flex items-center  cursor-pointer justify-between px-4 py-2 text-white hover:bg-gray-700 hover:text-[#ff6b00] transition-colors duration-200">
+          <a class="flex items-center  cursor-pointer justify-between px-4 py-2 text-white hover:bg-[var(--clr-blue2)] hover:text-[var(--clr-orange)] transition-colors duration-200">
             Construction
             <ion-icon name="arrow-forward-outline" class="opacity-0 group-hover:opacity-100"></ion-icon>
           </a>
-          <a class="flex items-center cursor-pointer justify-between px-4 py-2 text-white hover:bg-gray-700 hover:text-[#ff6b00] transition-colors duration-200">
+          <a class="flex items-center cursor-pointer justify-between px-4 py-2 text-white hover:bg-[var(--clr-blue2)] hover:text-[var(--clr-orange)] transition-colors duration-200">
             Material Engineering
             <ion-icon name="arrow-forward-outline" class="opacity-0 group-hover:opacity-100"></ion-icon>
           </a>
         </div>
       </div>
     </div>
-    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">Blog</span>
-    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">Projects</span>
+    <span class="cursor-pointer hover:text-[var(--clr-orange)] transition-colors duration-200">Blog</span>
+    <span class="cursor-pointer hover:text-[var(--clr-orange)] transition-colors duration-200">Projects</span>
         <div class="relative group">
-      <div class="flex items-center gap-1 cursor-pointer hover:text-[#ff6b00] transition-colors duration-200">
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[var(--clr-orange)] transition-colors duration-200">
         <span>Pages</span>
         <ion-icon 
           name="caret-down-outline" 
           class="text-lg transition-transform duration-300 group-hover:rotate-180"
         ></ion-icon>
       </div>
-      <div class="absolute hidden group-hover:block top-full left-0 bg-gray-800 rounded-lg shadow-lg py-2 w-48 z-30">
+      <div class="absolute hidden group-hover:block top-full left-0 bg-[var(--clr-blue)] rounded-lg shadow-lg py-2 w-48 z-30">
         <div class="flex flex-col">
-          <a class="flex items-center justify-between px-4 py-2 text-white cursor-pointer hover:bg-gray-700 hover:text-[#ff6b00] transition-colors duration-200">
+          <a class="flex items-center justify-between px-4 py-2 text-white cursor-pointer hover:bg-[var(--clr-blue2)] hover:text-[var(--clr-orange)] transition-colors duration-200">
             Our Team
             <ion-icon name="arrow-forward-outline" class="opacity-0 group-hover:opacity-100"></ion-icon>
           </a>
-          <a  (click)="parsingplan()" class="flex items-center justify-between px-4 py-2 text-white hover:bg-gray-700 hover:text-[#ff6b00] transition-colors duration-200 cursor-pointer">
+          <a  (click)="parsingplan()" class="flex items-center justify-between px-4 py-2 text-white hover:bg-[var(--clr-blue2)] hover:text-[var(--clr-orange)] transition-colors duration-200 cursor-pointer">
             Pricing Plans
             <ion-icon   name="arrow-forward-outline" class="opacity-0 group-hover:opacity-100"  ></ion-icon>
           </a>
         </div>
       </div>
     </div>
-    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200" (click)="cotect()">Contact Us</span>
+    <span class="cursor-pointer hover:text-[var(--clr-orange)] transition-colors duration-200" (click)="cotect()">Contact Us</span>
     <img src="../../../../../assets/imgs/call2.svg" alt="" >
-    <span class="cursor-pointer hover:text-[#ff6b00] transition-colors duration-200"  (click)="cotect()">+01123456789</span>
+    <span class="cursor-pointer hover:text-[var(--clr-orange)] transition-colors duration-200"  (click)="cotect()">+01123456789</span>
   </div>
 </div>

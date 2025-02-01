@@ -11,9 +11,6 @@ imports: [ImgComponent, IonIcon, InnovativesolutioncardComponent],
 
 })
 export class IndustryComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
+ public ngOnInit():void {}
 
 }

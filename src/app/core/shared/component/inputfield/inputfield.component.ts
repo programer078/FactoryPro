@@ -13,7 +13,6 @@ export class InputfieldComponent {
   private _control = signal<FormControl>(new FormControl());
   private _type = signal<string>('text');
   private _placeholder = signal<string>('');
-
   @Input()
   set control(value: FormControl) {
     this._control.set(value);
@@ -21,7 +20,6 @@ export class InputfieldComponent {
   get control(): FormControl {
     return this._control();
   }
-
   @Input()
   set type(value: string) {
     this._type.set(value);
@@ -29,7 +27,6 @@ export class InputfieldComponent {
   get type(): string {
     return this._type();
   }
-
   @Input()
   set placeholder(value: string) {
     this._placeholder.set(value);

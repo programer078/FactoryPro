@@ -15,7 +15,7 @@ import { InputfieldComponent } from "../inputfield/inputfield.component";
   imports: [HeaderComponent, ImgComponent, IonContent, IonIcon, FoterComponent, CommonModule, ReactiveFormsModule, InputfieldComponent],
 })
 export class ContactusComponent  implements OnInit {
-  contactForm = new FormGroup({
+  public  contactForm = new FormGroup({
     formControlFirstName: new FormControl('', Validators.required),
     formControlLastName: new FormControl('', Validators.required),
     formControlEmail: new FormControl('', [Validators.required, Validators.email]),
@@ -23,14 +23,12 @@ export class ContactusComponent  implements OnInit {
     formControlMessage: new FormControl('', Validators.required),
   });
 
-  onSubmit() {
+  public onSubmit(): void {
     if (this.contactForm.valid) {
       console.log('Form Submitted:', this.contactForm.value);
       alert('Form submitted successfully!');
     }
   }
-  constructor() { }
-
-  ngOnInit() {}
+  public ngOnInit(): void { }
 
 }

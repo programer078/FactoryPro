@@ -10,9 +10,6 @@ import { ImgComponent } from '../img/img.component';
   imports: [IonContent, HeaderComponent,IonIcon,IonRow,IonCol,IonGrid,ImgComponent,IonList]
 })
 export class ExcellenceComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
+   public ngOnInit(): void {}
 
 }

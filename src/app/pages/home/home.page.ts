@@ -20,11 +20,7 @@ import { FoterComponent } from 'src/app/core/shared/component/foter/foter.compon
 })
 export class HomePage {
   isMenuOpen = false;
- 
-
-toggleMenu() {
+ public toggleMenu() {
   this.isMenuOpen = !this.isMenuOpen;
 }
-
-  constructor() {}
 }

@@ -16,9 +16,6 @@ import { FoterComponent } from '../foter/foter.component';
     imports: [IonContent, CommonModule, FormsModule, ImgComponent, HeaderComponent, ParsingplanComponent, IndustryComponent, SatisfiedclientComponent, FoterComponent]
 })
 export class PriplanComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
+ public ngOnInit():void {}
 
 }

@@ -1,7 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { IonIcon } from '@ionic/angular/standalone';
-
 @Component({
   selector: 'app-satisfiedclient',
   standalone: true,

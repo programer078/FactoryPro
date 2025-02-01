@@ -10,9 +10,6 @@ import { IonContent,IonIcon,IonCol,IonGrid,IonRow,IonList, } from '@ionic/angula
   imports: [ImgComponent,IonIcon],
 })
 export class FoterComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
+  ngOnInit(): void {}
 
 }

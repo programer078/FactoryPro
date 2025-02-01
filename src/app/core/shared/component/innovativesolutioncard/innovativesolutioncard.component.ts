@@ -11,7 +11,6 @@ export class InnovativesolutioncardComponent  implements OnInit {
   private _imagePath = signal<string>('');
   private _title = signal<string>('');
   private _description = signal<string>('');
-
   @Input() set backgroundColor(value: string) {
     this._backgroundColor.set(value);
   }
@@ -24,8 +23,6 @@ export class InnovativesolutioncardComponent  implements OnInit {
   @Input() set description(value: string) {
     this._description.set(value);
   }
-
-  // Getters for readonly signals
   get backgroundColor(): Signal<string> {
     return this._backgroundColor.asReadonly();
   }
@@ -41,8 +38,6 @@ export class InnovativesolutioncardComponent  implements OnInit {
   get description(): Signal<string> {
     return this._description.asReadonly();
   }
-  constructor() { }
-
-  ngOnInit() {}
+ public ngOnInit():void {}
 
 }

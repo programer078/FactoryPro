@@ -1,7 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { IonIcon, } from '@ionic/angular/standalone';
 import { Card } from 'src/app/core/interface/card.interface';
-
 @Component({
   selector: 'app-services-card',
   standalone: true,
@@ -30,8 +29,5 @@ export class ServicesCardComponent implements OnInit {
       tital: 'Equipment Maintenance Support',
     },
   ];
-
-  constructor() {}
-
-  ngOnInit() {}
+ public ngOnInit():void {}
 }

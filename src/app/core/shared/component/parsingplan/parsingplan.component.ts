@@ -8,9 +8,6 @@ import { IonContent,IonIcon,IonCol,IonGrid,IonRow,IonList, } from '@ionic/angula
   imports:[IonIcon]
 })
 export class ParsingplanComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
+ public ngOnInit():void {}
 
 }
