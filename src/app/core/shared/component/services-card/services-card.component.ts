@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit,signal,Signal, } from '@angular/core';
 import { IonIcon, } from '@ionic/angular/standalone';
 import { Card } from 'src/app/core/interface/card.interface';
 @Component({
@@ -11,7 +11,7 @@ import { Card } from 'src/app/core/interface/card.interface';
 })
 export class ServicesCardComponent implements OnInit {
   
-  public cardsection: Card[] = [
+    public cardsection = signal<Card[]>([
     {
      img: '../../../../../assets/imgs/custommanifucther.svg',
       tital: 'Manufacturing Solution',
@@ -28,6 +28,6 @@ export class ServicesCardComponent implements OnInit {
       img: '../../../assets/imgs/equiment maintenance.svg',
       tital: 'Equipment Maintenance Support',
     },
-  ];
+  ]);
  public ngOnInit():void {}
 }

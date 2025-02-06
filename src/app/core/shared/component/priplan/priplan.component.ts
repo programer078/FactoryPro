@@ -16,6 +16,14 @@ import { FoterComponent } from '../foter/foter.component';
     imports: [IonContent, CommonModule, FormsModule, ImgComponent, HeaderComponent, ParsingplanComponent, IndustryComponent, SatisfiedclientComponent, FoterComponent]
 })
 export class PriplanComponent  implements OnInit {
+
+  selectedCurrency: string = 'USD'; // Default currency
+
+  // Function to update currency from Header
+  updateCurrency(newCurrency: string) {
+    this.selectedCurrency = newCurrency;
+  }
  public ngOnInit():void {}
+
 
 }

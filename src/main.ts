@@ -2,6 +2,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { RouteReuseStrategy, provideRouter, withPreloading, PreloadAllModules, withHashLocation } from '@angular/router';
 import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalone';
 import { addIcons, } from 'ionicons';
+
 import { register } from 'swiper/element/bundle';
 register();
 import { routes } from './app/app.routes';

@@ -5,7 +5,9 @@
     </div>
     <div class="h-full flex flex-col  mt-10 ">
       <div>
-        <h4 class="text-4xl font-bold text-[var(--clr-orange1)]">$39 <span class="text-sm font-medium text-[var(--clr-blue1)]">/month</span></h4>
+        <h4 class="text-4xl font-bold text-[var(--clr-orange1)]">
+          {{ planPrice | currencyConversion:selectedCurrency }}
+          <span class="text-sm font-medium text-[var(--clr-blue1)]">/month</span></h4>
         <h5 class="text-lg font-semibold mt-2">Advanced Plan</h5>
         <ul class="mt-10 space-y-5">
           <li class="flex items-center space-x-2">
@@ -37,7 +39,9 @@
     </div>
     <div class="h-full flex flex-col mt-10 ">
       <div>
-        <h4 class="text-4xl font-bold ">$39 <span class="text-sm font-medium">/month</span></h4>
+        <h4 class="text-4xl font-bold ">
+          {{ planPrice | currencyConversion:selectedCurrency }}
+          <span class="text-sm font-medium">/month</span></h4>
         <h5 class="text-lg font-semibold mt-2">Advanced Plan</h5>
         <ul class="mt-10 space-y-5">
           <li class="flex items-center space-x-2">
@@ -61,22 +65,25 @@
       </div>
         <div class="  font-bold mt-10 px-3 text-center py-1.5 rounded-[5px] cursor-pointer border border-white w-[150px] h-[40px] text-[15px]">Purchase Now</div>
     </div>
-  </div>
+  </div>  
 
   <div class="bg-gray-100 p-6 rounded-2xl relative h-[500px]  tablet:h-[550px] desktop:h-[500px">
     <div class="absolute top-0 right-0 p-0">
       <img src="../../../assets/imgs/icon-pricing-box-3.svg.svg" class="w-20 h-20">
     </div>
-    <div class="h-full flex flex-col mt-10 ">
+    <div class="h-full flex flex-col mt-10">
       <div>
-        <h4 class="text-4xl font-bold text-[var(--clr-orange1)]">$39 <span class="text-sm font-medium text-[var(--clr-blue1)]">/month</span></h4>
+        <h4 class="text-4xl font-bold text-[var(--clr-orange1)]">
+          {{ planPrice | currencyConversion:selectedCurrency }}
+          <span class="text-sm font-medium text-[var(--clr-blue1)]">/month</span>
+        </h4>
         <h5 class="text-lg font-semibold mt-2">Advanced Plan</h5>
         <ul class="mt-10 space-y-5">
           <li class="flex items-center space-x-2">
             <img src="../../../assets/imgs/seatingicon.svg" alt="">
             <span class="text-[var(--clr-gray2)] font-medium">Standard Manufacturing Services</span>
           </li>
-            <li class="flex items-center space-x-2">
+          <li class="flex items-center space-x-2">
             <img src="../../../assets/imgs/seatingicon.svg" alt="">
             <span class="text-[var(--clr-gray2)] font-medium">Quality Control Checks</span>
           </li>
@@ -84,14 +91,17 @@
             <img src="../../../assets/imgs/seatingicon.svg" alt="">
             <span class="text-[var(--clr-gray2)] font-medium">Technical Support</span>
           </li>
-            <li class="flex items-center space-x-2">
+          <li class="flex items-center space-x-2">
             <img src="../../../assets/imgs/seatingicon.svg" alt="">
             <span class="text-[var(--clr-gray2)] font-medium">Monthly Progress Reports</span>
           </li>
         </ul>
       </div>
-     <div class=" text-black font-bold mt-10 px-3 text-center py-1.5 rounded-[5px] cursor-pointer border border-[var(--clr-orange1)] w-[150px] h-[40px] text-[15px]">Purchase Now</div>
+      <div class="text-black font-bold mt-10 px-3 text-center py-1.5 rounded-[5px] cursor-pointer border border-[var(--clr-orange1)] w-[150px] h-[40px] text-[15px]">
+        Purchase Now
+      </div>
     </div>
+    
   </div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:flex md:space-x-8 p-4 mt-12 mobile:mt-15 justify-center items-center  gap-4 mobile:gap-8 desktop:gap-4">

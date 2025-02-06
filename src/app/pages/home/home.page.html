@@ -11,7 +11,7 @@
       
     </div>
     <div class="relative w-full px-5 mx-0 sm:max-w-[1212px] sm:mx-auto sm:px-[60px] z-[5]">
-      <app-header class="w-full relative m-0"/>
+      <app-header class="w-full relative m-0"  (currencyChange)="updateCurrency($event)"/>
     </div>
     <div class="relative w-screen z-[2] left-1/2 -translate-x-1/2">
       <hr class="w-full h-[1px] bg-white/20 border-0 m-0">
@@ -36,18 +36,12 @@
           <br><br><br>        
           <ion-grid>
             <ion-row class="gap-5 sm:justify-center">
-              <div size="12" size-md="4" class="flex items-center">
-                <img src="../../../assets/imgs/seatingicon.svg" alt="" class=" text-2xl mr-2" >
-                <a class="text-[#d1d5db] font-mono ">Advanced Manufacturing Solutions</a>
-              </div>
+              @for (item of setadvanced(); track $index) { 
                 <div size="12" size-md="4" class="flex items-center">
-                  <img src="../../../assets/imgs/seatingicon.svg" alt="" class="text-2xl mr-2" >
-                <a class="text-[#d1d5db] font-mono  ">Quality Assurance Systems</a>
-              </div>
-                <div size="12" size-md="4" class="flex items-center">
-                  <img src="../../../assets/imgs/seatingicon.svg" alt="" class="text-2xl mr-2" >
-                <a class="text-[#d1d5db] font-mono  ">State-of-the-Art Technology</a>
-              </div>
+                  <img [src]="item.img" alt="" class=" text-2xl mr-2" >
+                  <a class="text-[#d1d5db] font-mono ">{{item.text}}</a>
+                  </div>
+               }
             </ion-row>
           </ion-grid>
         </div>
@@ -77,22 +71,12 @@
             </p>
             <div class="mt-6 flex flex-col md:flex-row md:items-start md:space-x-6">
               <ul class="space-y-2 flex-1">
-                <li class="flex items-center space-x-3">
-                  <img src="../../../assets/imgs/seatingicon.svg" alt="" class="text-2xl">
-                  <span class="text-[var(--clr-gray2)]">Sustainable Manufacturing</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <img src="../../../assets/imgs/seatingicon.svg" alt="" class=" text-2xl">
-                  <span class="text-[var(--clr-gray2)]">Advanced Automation</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <img src="../../../assets/imgs/seatingicon.svg" alt="" class="text-2xl">
-                  <span class="text-[var(--clr-gray2)]">Efficient Production Processes</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <img src="../../../assets/imgs/seatingicon.svg" alt="" class="text-2xl">
-                  <span class="text-[var(--clr-gray2)]">Reliable Delivery Services</span>
-                </li>
+                @for (item of about(); track $index) {
+                  <li class="flex items-center space-x-3">
+                    <img [src]="item.img" alt="" class="text-2xl">
+                    <span class="text-[var(--clr-gray2)]">{{item.text}}</span>
+                  </li>
+                }
               </ul>
                      <app-ratingbox/>
             </div>
@@ -180,41 +164,28 @@
           </p>
           <hr class="w-full h-[1px] bg-black/20 border-0 m-0 ">
           <div class="flex justify-between items-center mb-10 mobile:mt-3 mobile2:mt-3 mobile4:mt-3">
+            @for (item of rating(); track $index) {
             <div class="text-center">
-              <h3 class="text-3xl font-bold text-[var(--clr-orange)]">10k+</h3>
-              <p class="text-[var(--clr-gray2)] text-sm">Completed Projects</p>
+              <h3 class="text-3xl font-bold text-[var(--clr-orange)]">{{item.digit}}</h3>
+              <p class="text-[var(--clr-gray2)] text-sm">{{item.text}}</p>
             </div>
-            <div class="text-center">
-              <h3 class="text-3xl font-bold text-[var(--clr-orange)]">15+</h3>
-              <p class="text-[var(--clr-gray2)] text-sm">Satisfied Customers</p>
-            </div>
-            <div class="text-center">
-              <h3 class="text-3xl font-bold text-[var(--clr-orange)]">10k+</h3>
-              <p class="text-[var(--clr-gray2)] text-sm">Years of Mastery</p>
-            </div>
+          }
+           
           </div>
           <div class="flex items-center space-x-4">
-            <div class="flex -space-x-2">
-              <img
-                class="w-10 h-10 rounded-full border-2 border-white"
-                src="../../../assets/imgs/Container (2).png"
-                alt="Avatar 1"
-              />
-              <img
-                class="w-10 h-10 rounded-full border-2 border-white"
-                src="../../../assets/imgs/Container.png"
-                alt="Avatar 2"
-              />
-              <img
-                class="w-10 h-10 rounded-full border-2 border-white"
-                src="../../../assets/imgs/Container (1).png"
-                alt="Avatar 3"
-              />
-            </div>
-            <a href="https://www.youtube.com/watch?v=4BzjUq921Y4">
+              <div class="flex -space-x-2">
+            @for (item of img(); track $index) {
+                <app-img
+                  class="w-10 h-10 rounded-full border-2 border-white"
+                  [imgPath]="item.img"
+                  alt="Avatar 1"
+                />
+            }
+              </div>
+          
 
-                      <button  
-              class="flex items-center space-x-2 px-4 py-2 bg-[var(--clr-orange1)] text-white rounded-full shadow  focus:outline-none"
+                      <button  appColor (click)="video()"
+              class="flex items-center space-x-2 px-4 py-2  text-white rounded-full shadow  focus:outline-none"
             >
 
               <svg
@@ -227,7 +198,6 @@
               </svg>
               <span  >WATCH INTRO</span>
             </button>
-          </a>
           </div>
         </div>
       </div>
@@ -242,7 +212,7 @@
     <span class="uppercase text-sm text-black font-bold">OUR WORK</span>
   </div>
   <header class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-    <h6 class="text-4xl  text-gray-900 mobile:text-2xl mobile2:text-2xl mobile4:text-2xl desktop:text-4xl">Our successful project <br><span class="font-bold">initiatives</span></h6>
+    <h6 class="text-4xl text-gray-900 mobile:text-2xl mobile2:text-2xl mobile4:text-2xl desktop:text-4xl">Our successful project <br><span class="font-bold">initiatives</span></h6>
     <a class="text-gray-600 ">Our successful project initiatives showcase our commitment to excellence and innovation across various industries.</a>
   </header>
   <div class="hidden xl:block">
@@ -256,47 +226,21 @@
     </nav>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-    <div class="relative">
-      <div class="w-full h-[350px] object-cover rounded-[20px]">
-      <app-img imgPath="../../../assets/imgs/automashine.png" />
-      </div>  
-      <span class="absolute top-4 left-4 bg-black bg-opacity-60 text-white text-sm font-semibold p-1 rounded">Development</span>
-      <h3 class="text-lg font-bold text-[var(--clr-blue1)] mt-4 text-center mobile:text-sm mobile2:text-sm mobile4:text-sm desktop:text-lg">
-        Total Quality Management Implementation
-      </h3>
-    </div>
-    <div class="relative">
-      <div class="w-full h-[350px] object-cover rounded-[20px]">
-        <app-img imgPath="../../../assets/imgs/wokermashine.png" />
-        </div>  
-      <span class="absolute top-4 left-4 bg-black bg-opacity-60 text-white text-sm font-semibold p-1 rounded">Automation</span>
-      <h3 class="text-lg font-bold text-[var(--clr-blue1)] mt-4 text-center mobile:text-sm mobile2:text-sm mobile4:text-sm desktop:text-lg">
-        Advanced Research In Material Science
-      </h3>
-    </div>
-    <div class="relative">
-      <div class="w-full h-[350px] object-cover rounded-[20px]">
-        <app-img imgPath="../../../assets/imgs/wokerworking.png" />
+    @for (item of initiatives(); track $index) {
+      <div class="relative">
+        <div class="w-full h-[350px] object-cover rounded-[20px]">
+          <app-img [imgPath]="item.img" />
         </div>
-      <span class="absolute top-4 left-4 bg-black bg-opacity-60 text-white text-sm font-semibold p-1 rounded">Infrastructure</span>
-      <h3 class="text-lg font-boldtext-[var(--clr-blue1)] mt-4 text-center mobile:text-sm mobile2:text-sm mobile4:text-sm desktop:text-lg">
-        Workplace Safety Enhancement Initiative
-      </h3>
-    </div>
-    <div class="relative">
-      <div class="w-full h-[350px] object-cover rounded-[20px]">
-        <app-img imgPath="../../../assets/imgs/robetheart.png" />
-        </div>
-      <span class="absolute top-4 left-4 bg-black bg-opacity-60 text-white text-sm font-semibold p-1 rounded">Infrastructure</span>
-      <h3 class="text-lg font-bold text-[var(--clr-blue1)] mt-4 text-center mobile:text-sm mobile2:text-sm mobile4:text-sm desktop:text-lg">
-        Robotic Process Automation Deployment
-      </h3>
-    </div>
+        <span class="absolute top-4 left-4 bg-black bg-opacity-60 text-white text-sm font-semibold p-1 rounded">{{item.tital}}</span>
+        <h3 class="text-lg font-bold text-[var(--clr-blue1)] mt-4 text-center mobile:text-sm mobile2:text-sm mobile4:text-sm desktop:text-lg">
+   {{     item.text}}
+        </h3>
+      </div>
+    }
   </div>
 </div>
 
 <!-- <section7></section7> -->
- 
 
 <div class="bg-[var(--clr-gray1)] p-8">
   <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -305,9 +249,8 @@
         <ion-icon name="settings-outline" class="text-[var(--clr-orange)] text-2xl mr-2"></ion-icon>
         <span class="uppercase text-sm text-black font-medium">OUR PROCESS</span>
       </div>
-
-      <h6 class="text-3xl  text-gray-800 font-light mobile:text-2xl">
-        Streamlined processes  <span class="text-black font-bold "> for optimal efficiency</span>
+      <h6 class="text-3xl text-gray-800 font-light mobile:text-2xl">
+        Streamlined processes <span class="text-black font-bold "> for optimal efficiency</span>
       </h6>
       <div class="rounded-[25px] overflow-hidden">
         <img
@@ -319,65 +262,24 @@
     </div>
     <div class="flex flex-col justify-start h-full">
       <p class="text-[var(--clr-gray2)] mt-5">
-        Our process is designed to maximize efficiency and quality at every stage
-        of production. By integrating advanced technologies and best practices, we
-        ensure seamless workflows.
+        Our process is designed to maximize efficiency and quality at every stage of production. By integrating advanced technologies and best practices, we ensure seamless workflows.
       </p>
       <div id="stepContainer" class="space-y-6 mt-14">
-        <div
-          class="step-card flex items-center space-x-4 p-4 rounded-[30px] cursor-pointer transition hover:bg-[var(--clr-orange)] hover:text-white group"
-        >
-          <div
-            class="flex items-center justify-center text-4xl font-bold text-[var(--clr-orange)] group-hover:text-white transition"
-          >
-            <h1>01</h1>
+        @for (item of process(); track $index) { 
+        <div class="step-card flex items-center space-x-4 p-4 rounded-[30px] cursor-pointer transition hover:bg-[var(--clr-orange)] hover:text-white group">
+          <div class="flex items-center justify-center text-4xl font-bold text-[var(--clr-orange)] group-hover:text-white transition">
+            <h1>{{item.digit}}</h1>
           </div>
           <div>
             <h4 class="step-title text-lg font-semibold text-[var(--clr-blue1)] group-hover:text-white transition">
-              Understanding Your Needs
+              {{item.tital}}
             </h4>
             <p class="step-desc text-[var(--clr-gray2)] group-hover:text-white transition mobile:text-sm mobile2:text-sm mobile4:text-sm ">
-              We begin by thoroughly assessing your requirements and objectives to
-              develop a tailored approach.
+             {{item.text}}
             </p>
           </div>
         </div>
-        <div
-          class="step-card flex items-center space-x-4 p-4 rounded-[30px] cursor-pointer transition hover:bg-[var(--clr-orange)] hover:text-white group"
-        >
-          <div
-            class="flex items-center justify-center text-4xl font-bold text-[var(--clr-orange)] group-hover:text-white transition"
-          >
-            <h1>02</h1>
-          </div>
-          <div>
-            <h4 class="step-title text-lg font-semibold text-[var(--clr-blue1)] group-hover:text-white transition">
-              Design and Planning
-            </h4>
-            <p class="step-desc text-[var(--clr-gray2)] group-hover:text-white transition mobile:text-sm mobile2:text-sm mobile4:text-sm  ">
-              Our team collaborates to create detailed project plans, ensuring all
-              aspects of the process.
-            </p>
-          </div>
-        </div>
-        <div
-          class="step-card flex items-center space-x-4 p-4 rounded-[30px] cursor-pointer transition hover:bg-[var(--clr-orange)] hover:text-white group"
-        >
-          <div
-            class="flex items-center justify-center text-4xl font-bold text-[var(--clr-orange)] group-hover:text-white transition"
-          >
-            <h1>03</h1>
-          </div>
-          <div>
-            <h4 class="step-title text-lg font-semibold text-[var(--clr-blue1)] group-hover:text-white transition">
-              Implementation
-            </h4>
-            <p class="step-desc text-[var(--clr-gray2)] group-hover:text-white transition mobile:text-sm mobile2:text-sm mobile4:text-sm ">
-              Utilizing advanced technologies and skilled personnel, we execute the
-              project.
-            </p>
-          </div>
-        </div>
+      }
       </div>
     </div>
   </div>
@@ -398,21 +300,18 @@
     </div>
     <div class="mt-12 desktop:mt-12 mobile:mt-3 mobile2:mt-2 mobile4:mt-2">
       <p class="text-[var(--clr-gray2)]">
-        We believe in providing clear and upfront pricing to ensure that you <br>
-        understand the value of our services.
+        We believe in providing clear and upfront pricing to ensure that you understand the value of our services.
       </p>
     </div>
   </div>
-  <app-parsingplan/>
-  
-  
-  
+  <app-parsingplan [selectedCurrency]="selectedCurrency"/>
 </div>
 
 <!-- <section9></section> -->
 <app-satisfiedclient/>
- <!-- <section10></section10> -->
- <div class="p-8">
+
+<!-- <section10></section10> -->
+<div class="p-8">
   <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
     <div class="space-y-6">
       <div class="flex items-center space-x-2">
@@ -426,47 +325,39 @@
     </div>
     <div class="mt-12 desktop:mt-12 mobile:mt-3 mobile2:mt-2 mobile4:mt-2">
       <p class="text-[var(--clr-gray2)]">
-        Stay updated with the latest trends, innovations, and expert insights in the
-        manufacturing and industrial sectors
+        Stay updated with the latest trends, innovations, and expert insights in the manufacturing and industrial sectors.
       </p>
     </div>
   </div>
- 
-  
+
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10">
     <div class="relative">
-      <div class="w-full h-[350px]  rounded-[30px] overflow-hidden">
+      <div class="w-full h-[350px] rounded-[30px] overflow-hidden">
         <app-img imgPath="../../../assets/imgs/reducingwast.png" />
-        </div>  
-      <h3 class="text-lg font-bold text-[var(--clr-blue1)] mt-4  mobile:text-[12px]  mobile2:text-sm mobile4:text-sm desktop:text-lg float-start">
+      </div>
+      <h3 class="text-lg font-bold text-[var(--clr-blue1)] mt-4 mobile:text-[12px] mobile2:text-sm mobile4:text-sm desktop:text-lg float-start">
         Sustainable Practices Reducing Waste in <br>
         Industrial Production
       </h3>
       <button class="w-10 h-10 flex items-center mt-4 float-end justify-center bg-[var(--clr-orange)] text-white rounded-[4px] shadow hover:bg-[var(--clr-orange)]">
-        <ion-icon
-            name="arrow-forward-outline"
-            class="text-white text-2xl -rotate-[28deg]  hover:translate-x-[5px] transition-transform duration-300 "
-          ></ion-icon>
-    </button>
+        <span appArrowIcon  class="text-white text-6xl -rotate-[28deg] hover:translate-x-[5px] transition-transform duration-300 "></span>
+      </button>
     </div>
- <div class="relative">
-  <div class="w-full h-[350px] object-cover">
-    <app-img imgPath="../../../assets/imgs/wokflows.png" />
-    </div>  
-    <h3 class="text-lg font-bold text-[var(--clr-blue1)] mt-4  mobile:text-[12px]  mobile2:text-sm mobile4:text-sm desktop:text-lg float-start">
-      Advanced Robotics Revolutionizing <br>
-      Industrial Workflows
-    </h3>
-    <button class="w-10 h-10 flex items-center mt-4 float-end justify-center bg-[var(--clr-orange)] text-white rounded-[4px] shadow hover:bg-[var(--clr-orange)">
-      <ion-icon
-      name="arrow-forward-outline"
-      class="text-white text-2xl -rotate-[28deg]  hover:translate-x-[5px] transition-transform duration-300 "
-    ></ion-icon>
-  </button>
- </div>
-
+    <div class="relative">
+      <div class="w-full h-[350px] object-cover">
+        <app-img imgPath="../../../assets/imgs/wokflows.png" />
+      </div>
+      <h3 class="text-lg font-bold text-[var(--clr-blue1)] mt-4 mobile:text-[12px] mobile2:text-sm mobile4:text-sm desktop:text-lg float-start">
+        Advanced Robotics Revolutionizing <br> Industrial Workflows
+      </h3>
+      <button class="w-10 h-10 flex items-center mt-4 float-end justify-center bg-[var(--clr-orange)] text-white rounded-[4px] shadow hover:bg-[var(--clr-orange)]">
+        <span appArrowIcon  class="text-white text-6xl -rotate-[28deg] hover:translate-x-[5px] transition-transform duration-300 "></span>
+      </button>
     </div>
+  </div>
 </div>
+
 <app-foter></app-foter>
+
   </ion-content>
     
