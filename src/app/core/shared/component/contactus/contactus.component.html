@@ -74,16 +74,103 @@
       </div>
       <div class="bg-white p-6 rounded-lg shadow-md w-full sm:w-96 z-10">
         <h2 class="text-xl font-bold text-[var(--clr-blue1)]">Contact <span class="font-black">me</span></h2>
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="mt-4">
-            <div class="flex flex-col sm:flex-row sm:gap-2">
-                <app-inputfield [control]="contactForm.controls.formControlFirstName" type="text" placeholder="Enter first name"></app-inputfield>
-                <app-inputfield [control]="contactForm.controls.formControlLastName" type="text" placeholder="Enter last name"></app-inputfield>
-            </div>
-            <app-inputfield [control]="contactForm.controls.formControlEmail" type="email" placeholder="Enter your e-mail"></app-inputfield>
-            <app-inputfield [control]="contactForm.controls.formControlPhone" type="tel" placeholder="Enter your phone no."></app-inputfield>
-            <app-inputfield [control]="contactForm.controls.formControlMessage" type="text" placeholder="Write Message"></app-inputfield>
-            <button type="submit" [disabled]="contactForm.invalid" class="w-full mt-4 p-2 bg-[var(--clr-orange)] text-white rounded-md hover:bg-[var(--clr-orange1)]">Submit Message</button>
-        </form>
+        <br>
+        <div class="max-h-[500px] overflow-y-auto">
+          <div *ngFor="let formObj of contactForms; let i = index" class="relative mb-8 border p-4 rounded-lg shadow-md">
+              <button *ngIf="i > 0" type="button" (click)="removeForm(i)" 
+              class="absolute top-2 right-2 text-red-500 -mt-1.5">
+              <ion-icon name="trash" size="small"></ion-icon>
+            </button>
+            <form [formGroup]="formObj.form" (ngSubmit)="onSubmit(i)">
+              <div class="flex flex-col sm:flex-row sm:gap-2 bg-white">
+                <app-inputfield 
+                  [control]="formObj.form.controls['formControlFirstName']" 
+                  type="text" 
+                  placeholder="Enter first name">
+                </app-inputfield>
+                <app-inputfield 
+                  [control]="formObj.form.controls['formControlLastName']" 
+                  type="text" 
+                  placeholder="Enter last name">
+                </app-inputfield>
+              </div>
+              <app-inputfield 
+                [control]="formObj.form.controls['formControlEmail']" 
+                type="email" 
+                placeholder="Enter your e-mail">
+              </app-inputfield>
+              <app-inputfield 
+                [control]="formObj.form.controls['formControlPhone']" 
+                type="tel" 
+                placeholder="Enter your phone no.">
+              </app-inputfield>
+              <app-inputfield 
+                [control]="formObj.form.controls['formControlMessage']" 
+                type="text" 
+                placeholder="Write Message">
+              </app-inputfield>
+              <div *ngFor="let field of formObj.additionalFields; let j = index" class="flex items-center gap-2">
+                <div class="flex w-full items-center border border-gray-300 rounded-lg p-2">
+                  <app-inputfield 
+                    [control]="formObj.form.controls[field.controlName]" 
+                    type="text" 
+                    [placeholder]="field.label"
+                    class="flex-1">
+                  </app-inputfield>
+                  <button type="button" (click)="removeField(i, j)" class="ml-auto text-red-500 p-2">
+                    <ion-icon name="trash" size="small"></ion-icon>
+                  </button>
+                </div>
+              </div>
+              <button 
+                type="submit" 
+                [disabled]="isFormInvalid(formObj.form)" 
+                class="w-full mt-4 p-2 text-white rounded-md bg-[var(--clr-orange)] disabled:bg-gray-400">
+                Submit Message
+              </button>
+              <div *ngIf="i === contactForms.length - 1">
+                <button type="button" (click)="openModal(i)" class="w-full mt-2 p-2 text-white rounded-md bg-blue-500">
+                  Add New Field
+                </button>
+                <button type="button" (click)="addNewForm()" class="w-full mt-4 p-2 text-white rounded-md bg-green-500">
+                  Add Form
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+
+@if (showModal ) {
+  <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-4 rounded-lg shadow-lg w-80">
+      <h2 class="text-xl mb-4">Add New Field</h2>
+      <input 
+        type="text" 
+        [value]="newFieldLabel" 
+        (input)="onInputChange($event)"
+        placeholder="Enter field label"
+        class="w-full p-2 border rounded-md mb-4">
+      <div class="flex justify-end gap-2">
+        <button type="button" (click)="showModal = false" class="px-4 py-2 rounded-md border">
+          Cancel
+        </button>
+        <button type="button" (click)="addNewField()" class="px-4 py-2 rounded-md bg-blue-500 text-white">
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+}
+
+
+        
+        
     </div>
     </div>
   </div>

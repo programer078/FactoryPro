@@ -7,7 +7,8 @@ module.exports = {
       },
       screens: {
         mobile: '360px',   // Mobile devices
-        mobile2: '340px',   // 
+        mobile2: '340px',
+        mobile8: '710px',   // 
         tablet: '768px',   // Tablets
         desktop: '1280px', // Desktops
         mobile4: '420px',   // Mobile devices

@@ -1,4 +1,4 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, Input, WritableSignal, signal } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -10,9 +10,10 @@ import { CommonModule } from '@angular/common';
   imports: [ReactiveFormsModule, CommonModule]
 })
 export class InputfieldComponent {
-  private _control = signal<FormControl>(new FormControl());
-  private _type = signal<string>('text');
-  private _placeholder = signal<string>('');
+  private _control: WritableSignal<FormControl> = signal(new FormControl());
+  private _type: WritableSignal<string> = signal('text');
+  private _placeholder: WritableSignal<string> = signal('');
+
   @Input()
   set control(value: FormControl) {
     this._control.set(value);
@@ -20,6 +21,7 @@ export class InputfieldComponent {
   get control(): FormControl {
     return this._control();
   }
+
   @Input()
   set type(value: string) {
     this._type.set(value);
@@ -27,6 +29,7 @@ export class InputfieldComponent {
   get type(): string {
     return this._type();
   }
+
   @Input()
   set placeholder(value: string) {
     this._placeholder.set(value);
@@ -36,10 +39,10 @@ export class InputfieldComponent {
   }
 
   onBlur() {
-    this.control.markAsTouched();
+    this._control().markAsTouched();
   }
 
   shouldShowError(): boolean {
-    return this.control.invalid && (this.control.dirty || this.control.touched);
+    return this._control().invalid && (this._control().dirty || this._control().touched);
   }
 }

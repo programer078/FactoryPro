@@ -1,11 +1,21 @@
 <ion-content class="relative overflow-auto h-screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <div class="absolute top-0 left-0 w-screen h-screen z-[1]">
-      <div class="relative w-full h-[930px]  object-fill mobile:h-[1040px] desktop:w-[100%] mobile:w-[500px]  mobil:h-[900px] mobile2:h-[1000px] mobile6:h-[800px] tablet:h-[800px] desktop:h-[750px] flex items-center justify-center overflow-hidden">
+      <div class="relative w-full h-[930px]  object-fill mobile:h-[1040px]   mobil:h-[900px] mobile2:h-[930px] mobile6:h-[800px] tablet:h-[800px] desktop:h-[750px] flex items-center justify-center overflow-hidden">
+
         <img 
-          src="assets/imgs/mainpic.png"
-          class="w-full h-full object-fit"
-          alt="Main Image"
-        />   
+        src="assets/imgs/mainpic.png" 
+        class="absolute inset-0 w-full h-full object-cover md:block hidden"
+        alt="Main Image"
+      />
+    
+      <div class="absolute inset-0 md:hidden">
+        <video autoplay loop muted class="w-full h-full object-cover">
+          <source src="../../../assets/imgs/202502081333 (2).mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+      </div>
       </div>
       
       

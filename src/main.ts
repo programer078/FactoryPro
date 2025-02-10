@@ -6,7 +6,7 @@ import { addIcons, } from 'ionicons';
 import { register } from 'swiper/element/bundle';
 register();
 import { routes } from './app/app.routes';
-import { menuOutline, closeOutline,trendingUpOutline ,logoFacebook,arrowForwardOutline,settingsOutline,starOutline,playCircleOutline, calendar, calendarOutline, cashOutline, timeOutline, arrowBack, arrowBackOutline, logoTwitter, logoInstagram,chevronDown, caretDown, callOutline, mailOutline, locationOutline} from 'ionicons/icons';
+import { menuOutline, closeOutline,trendingUpOutline ,logoFacebook,arrowForwardOutline,settingsOutline,starOutline,playCircleOutline, calendar, calendarOutline, cashOutline, timeOutline, arrowBack, arrowBackOutline, logoTwitter, logoInstagram,chevronDown, caretDown, callOutline, mailOutline, locationOutline, trashOutline} from 'ionicons/icons';
 import { AppComponent } from './app/app.component';
 import { HashLocationStrategy } from '@angular/common';
 bootstrapApplication(AppComponent, {
@@ -37,4 +37,5 @@ addIcons({
   'call-outline':callOutline,
   'mail-outline':mailOutline,
   'location-outline':locationOutline,
+  'trash':trashOutline
 });

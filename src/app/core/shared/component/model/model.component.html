@@ -1,3 +1,36 @@
-<p>
-  model works!
-</p>
+<div class="relative p-4">
+  <!-- Close Icon (Right Side) -->
+  <ion-icon 
+      name="close" 
+      class="text-black text-3xl cursor-pointer absolute top-4 right-4"
+      (click)="closeModal()">
+  </ion-icon>
+
+  <!-- Content Section -->
+  <div class="ion-padding">
+      <h4 class="text-4xl font-bold text-[var(--clr-orange1)]">
+        {{ price | currencyConversion:currency }}
+
+          <span class="text-sm font-medium text-[var(--clr-blue1)]">/month</span>
+      </h4>
+      <h5 class="text-lg font-semibold mt-2">Advanced Plan</h5>
+      <ul class="mt-10 space-y-5">
+          <li class="flex items-center space-x-2">
+              <img src="../../../assets/imgs/seatingicon.svg" alt="">
+              <span class="text-[var(--clr-gray2)] font-medium">Standard Manufacturing Services</span>
+          </li>
+          <li class="flex items-center space-x-2">
+              <img src="../../../assets/imgs/seatingicon.svg" alt="">
+              <span class="text-[var(--clr-gray2)] font-medium">Quality Control Checks</span>
+          </li>
+          <li class="flex items-center space-x-2">
+              <img src="../../../assets/imgs/seatingicon.svg" alt="">
+              <span class="text-[var(--clr-gray2)] font-medium">Technical Support</span>
+          </li>
+          <li class="flex items-center space-x-2">
+              <img src="../../../assets/imgs/seatingicon.svg" alt="">
+              <span class="text-[var(--clr-gray2)] font-medium">Monthly Progress Reports</span>
+          </li>
+      </ul>
+  </div>
+</div>

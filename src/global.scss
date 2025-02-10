@@ -35,6 +35,15 @@
       --ion-toolbar-text-color: #000000;
     }
   }
+
+  .custom-modal-class {
+    --width: 300px !important;
+    --height: 400px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 /* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
 @import "@ionic/angular/css/float-elements.css";
